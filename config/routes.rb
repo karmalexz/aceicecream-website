@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
  
+  get '/cart' =>'cart#new'
+  get '/cart/index' =>'cart#index'
+  
   root 'home#home'
 
   get '/flavours' => 'home#index'

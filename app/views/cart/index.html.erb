@@ -1,0 +1,10 @@
+<h1>cart</h1>
+<ul>
+<% @current_user.line_items.each do |i| %>
+    <li>
+        product name:<%= i.product.name %>
+        quantity: <%= i.quantity %>
+        price: <%= i.total_price %>
+    </li>
+<% end %>
+</ul>

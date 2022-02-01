@@ -1,8 +1,8 @@
-.icecream-photo {
-  max-width: 500px;
-  max-height: 50vh;
-  margin-top: 10px;
-}
+ .icecream-photo {
+  /* max-height: 50vh; */
+  margin-top: 50px;
+  
+} 
 
 * {
   border: 0;
@@ -42,7 +42,7 @@ a {
   text-align: center;
   width: 70%;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-wrapper {
     width: 90%;
   }
@@ -51,7 +51,7 @@ a {
   .nav-wrapper {
     width: 100%;
   }
-}
+} */
 
 .logo {
   float: left;
@@ -61,11 +61,11 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .logo {
     /*       margin-left: 5px; */
   }
-}
+} */
 
 #navbar ul {
   display: inline-block;
@@ -149,13 +149,73 @@ a {
   /* transition: 0s; */
 }
 img {
-  max-width: 150px;
+  max-width: 300px;
   margin-top: -0.8em;
 }
 .yield{
-    margin-top: 5%;
+    margin-top: 8%;
     margin-left: 10px ;
+    /* position: fixed; */
 }
 form input{
     border: 2px solid black;
+}
+#menu{
+    position: absolute;
+    top:0;
+    left: 30%;
+}
+h2{
+    text-align: center;
+}
+button{
+    background-color: lightblue;
+    cursor: pointer;
+}
+/* grid -------------------------------------------------------- */
+ul #grid {
+    padding: 0;
+    list-style: none;
+    margin: 20px auto 0;
+    /* width: 700px;   */
+    }
+  
+  #grid li {
+    float: left;
+    padding: 0;
+    margin: 0 5px 10px 5px;
+    } 
+  
+  #grid li a {
+    display: block;
+    }
+  
+  #grid li img {
+    padding: 7px; margin: 0;
+    /* width: 128px;
+    height: 128px; */
+    }
+  
+  #grid li a:hover img {
+  opacity:0.3; filter:alpha(opacity=30);
+    }
+
+
+ul{
+    list-style: none;
+    }
+.nav-logo{
+    max-width: 150px;
+}
+.cart-logo{
+width: 40px;
+height: 40px;
+text-align: center;
+/* margin-top: 5px; */
+margin-left: 30px;
+position: relative;
+top: 10px;
+
+/* right: 0; */
+/* position:absolute; */
 }

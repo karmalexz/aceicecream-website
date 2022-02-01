@@ -1,9 +1,75 @@
-<h2>Welcome
-</h2>
-    
-<h1>This is the homepage</h1>
-<h1>This is the homepage</h1>
-<h1>This is the homepage</h1>
-<h1>This is the homepage</h1>
-<h1>This is the homepage</h1>
-<h1>This is the homepage</h1>
+
+    <!-- Showcase -->
+    <section id="home" class="section-showcase">
+      <div class="container">
+        <div>
+          <h1>Hand crafted Ice Cream</h1>
+          <p>
+            Ace Ice Cream is a new Australian ice cream shop, focused on serving texture-driven handcrafted ice creams with a renewed attention to flavour and palate.
+          </p>
+            <%= link_to "Explore", flavours_path, class: "btn"%> 
+          <%# <a href="" class="btn">Read More</a> %>
+        </div>
+        <img src="https://i.pinimg.com/564x/ef/17/2f/ef172f8432dfbf0b58c946bb3e5e1c2c.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Large Text -->
+    <section id="about" class="section-large-text">
+      <div class="overlay">
+        <div class="section-large-text-inner">
+          <h3>Our Place</h3>
+          <h2>We Just ❤️ Ice Cream</h2>
+          <p>
+           Ace Ice Cream is a new Australian ice cream shop, focused on serving texture-driven handcrafted ice creams with a renewed attention to flavor and palate. We develop each recipe specifically for each individual flavor. The integrity of our ingredients is never compromised with additives or processed stabilizing. We look to change the way people eat and think about this nostalgic treat, by giving ice cream lovers an entirely original and contemporary ice cream experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-gallery">
+      <div class="gallery">
+        <img src="https://i.pinimg.com/564x/20/6f/62/206f62569c6d1d88718345b1913d9fc2.jpg" alt="" class="big" />
+        <img src="https://i.pinimg.com/564x/ed/b9/fc/edb9fc080f5fb0b67e2a04cce83ef7f1.jpg" alt="" class="big" />
+        <img src="https://i.pinimg.com/564x/37/be/6b/37be6bfeeda860dd65bf1d7736e3e40a.jpg" alt="" class="big" />
+        <img src="https://i.pinimg.com/564x/8e/29/60/8e29600041eac3ffd9e53ffade7eacaf.jpg" alt="" class="big" />
+        <img src="https://i.pinimg.com/564x/c4/f4/d5/c4f4d530f5862a9f2f25daa7159d7f54.jpg" alt="" class="big" />
+        <img src="https://i.pinimg.com/564x/8e/87/bd/8e87bd81576b0d5a54674fea6aab5077.jpg" alt="" class="big" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-footer">
+      <div class="container">
+        <div>
+          <h2>Ace Ice Cream</h2>
+          <a href="https://www.instagram.com/ace.icecreamm/">
+          <img src="https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-svg-vector-for-print.svg" alt="" class="insta" />
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.facebook.com/aceicecreamsydney">
+          <img src="https://www.designbust.com/download/640/png/facebook_logo_transparent512.png" alt="" class="facebook" />
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </div>
+        <div>
+          <h3>Company Info</h3>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Delivery Info</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company Value</h3>
+          <ul>
+            <li><a href="#">No Artificial Flavour</a></li>
+            <li><a href="#">No Artificial Colouring</a></li>
+            <li><a href="#">Small Batch Making</a></li>
+            <li><a href="#">Only Use Fresh Milk&Cream</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>

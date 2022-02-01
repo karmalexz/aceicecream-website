@@ -13,16 +13,6 @@
 
   <body>
     <%= render 'home/header' %>
-    <% if @current_user.present?%>
-      Welcome, <%= @current_user.first_name %>
-      |
-      <%= link_to 'Logout', login_path, method: 'delete', class:'login' %>
-    <% else %>  
-      <%= link_to 'Login', login_path %>
-      |
-      <%= link_to 'Sign up', '/nxxxxxxo' %>
-    <% end %>
-    
     <div class='yield'>
     <%= yield %>
     </div>

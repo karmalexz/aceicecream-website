@@ -1,7 +1,7 @@
 class LineItem < ApplicationRecord
-    belongs_to :product 
-    belongs_to :cart 
-
+    has_many :products 
+    belongs_to :carts,  optional: true
+    belongs_to :user, optional: true
     def total_price 
         price * quantity
     end 

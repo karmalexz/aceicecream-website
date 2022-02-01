@@ -7,4 +7,14 @@ class ApplicationController < ActionController::Base
     end
     session[:user_id] = nil unless @current_user.present?
   end  # fetch_user()
+  
+def check_if_logged_in 
+    unless @current_user.present?
+      flash[:error] = 'You must be logged in to perform that action.'
+      redirect_to login_path
+    end # login check
+
+  end  # check_if_logged_in()
+
 end  # class ApplicationController
+

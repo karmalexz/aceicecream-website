@@ -2,7 +2,7 @@
   <div class="nav-wrapper">
     <div class="logo">
     <%= link_to "/" do %>
-    <%= image_tag("logo.png") %>
+    <%= image_tag("logo.png", :class => "nav-logo") %>
     <% end %>
     </div>
 
@@ -12,6 +12,20 @@
      <li> <%= link_to "SHOP", flavours_path %> </li>
     <li> <%= link_to "ABOUT US", flavours_path %> </li>
      <li> <%= link_to "CONTACT US", flavours_path %> </li>
+     
+       <% if @current_user.present?%>
+      Welcome, <%= @current_user.first_name %>
+      |
+    <li>  <%= link_to 'Logout', login_path, method: 'delete', class:'login' %></li>
+      
+     <%= link_to image_tag("cart.png", :class=>"cart-logo"), cart_index_path,  alt:"cart logo" %> 
+    
+    <% else %>  
+    <li>  <%= link_to 'Login', login_path %></li>
+      |
+     <li> <%= link_to 'Sign up', '/nxxxxxxo' %></li>
+    <% end %>
+
     </ul>
   </div>
 </nav>
