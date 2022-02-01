@@ -1,0 +1,17 @@
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <div class="logo">
+    <%= link_to "/" do %>
+    <%= image_tag("logo.png") %>
+    <% end %>
+    </div>
+
+    <ul id="menu">
+     <li> <%= link_to "HOME", root_path %> </li>
+     <li> <%= link_to "FLAVOURS", flavours_path %> </li>
+     <li> <%= link_to "SHOP", flavours_path %> </li>
+    <li> <%= link_to "ABOUT US", flavours_path %> </li>
+     <li> <%= link_to "CONTACT US", flavours_path %> </li>
+    </ul>
+  </div>
+</nav>

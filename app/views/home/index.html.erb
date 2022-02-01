@@ -1,0 +1,13 @@
+<h2> ICE CREAM FLAVOURS </h2>
+
+<ul>
+
+<% @products.each do |product| %>
+    <li>
+        <%# <%= image_tag product.image, class:"icecream-photo", alt:product.name %> 
+        <%= link_to product.name, flavour_path(product.id) %>
+        
+    </li>
+
+<% end %>
+</ul>

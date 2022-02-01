@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= render "application/favicon" %>
     <title>Aceicecream</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+
   </head>
 
   <body>
+    <%= render 'home/header' %>
+    <% if @current_user.present?%>
+      Welcome, <%= @current_user.first_name %>
+      |
+      <%= link_to 'Logout', login_path, method: 'delete', class:'login' %>
+    <% else %>  
+      <%= link_to 'Login', login_path %>
+      |
+      <%= link_to 'Sign up', '/nxxxxxxo' %>
+    <% end %>
+    
+    <div class='yield'>
     <%= yield %>
+    </div>
   </body>
 </html>
