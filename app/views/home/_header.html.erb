@@ -10,9 +10,7 @@
      <li> <%= link_to "HOME", root_path %> </li>
      <li> <%= link_to "FLAVOURS", flavours_path %> </li>
      <li> <%= link_to "SHOP", flavours_path %> </li>
-    <li> <%= link_to "ABOUT US", flavours_path %> </li>
-     <li> <%= link_to "CONTACT US", flavours_path %> </li>
-     
+    <li> <%= link_to "ABOUT US", flavours_path %> </li>     
        <% if @current_user.present?%>
       Welcome, <%= @current_user.first_name %>
       |
@@ -23,9 +21,25 @@
     <% else %>  
     <li>  <%= link_to 'Login', login_path %></li>
       |
-     <li> <%= link_to 'Sign up', '/nxxxxxxo' %></li>
+     <li> <%= link_to 'Sign up', new_user_path %></li>
     <% end %>
 
     </ul>
   </div>
 </nav>
+
+<%# 
+<div class="menuIcon">
+  <span class="icon icon-bars"></span>
+  <span class="icon icon-bars overlay"></span>
+</div>
+
+
+<div class="overlay-menu">
+  <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+</div> %>

@@ -1,0 +1,14 @@
+<h2>Edit User Info</h2>
+
+
+<ul>
+  <% @users.each do |u| %>
+  <li>
+    <%= link_to u.first_name, user_path(u.id)%>
+    <% if @current_user.present? && session[:user_id] == @current_user.id %>
+      (<%= link_to 'edit', edit_user_path(u.id) %>)
+    <%end%>
+    
+  </li>
+  <%end%>
+</ul>

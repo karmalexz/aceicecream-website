@@ -16,4 +16,4 @@ $<%= @product.price %>
 </p>
 
 <%= image_tag @product.image, class:"icecream-photo", alt:@product.name %>
-<%= link_to '<button type="button">Add to Cart</button>'.html_safe, cart_path %>
+<%= link_to '<button type="button">Add to Cart</button>'.html_safe, cart_add_item_path(@product.id), method: "post" %>

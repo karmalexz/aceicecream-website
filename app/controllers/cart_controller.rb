@@ -1,13 +1,34 @@
 class CartController < ApplicationController
   before_action :check_if_logged_in
-  def new
-    @item=LineItem.create product_id: params[:product_id], quantity: 1
+  
+  def add_item
+    #   @item = LineItem.find_by(product_id: params[:product_id])    
+    #   if LineItem.include?(@item)
+    #   @item.quantity +=1
+    # else
+    @item=LineItem.create product_id: params[:product_id], quantity: 1, user_id: @current_user.id 
     redirect_to flavours_path 
+    # end
   end
+  def add_quantity
+    @item = LineItem.find params[:id]
+      @item.quantity += 1
+      @item.save
+      redirect_to cart_index_path
+    end
 
-  def show
-  end
+    def update_quantity
+      @item = LineItem.find_by(product_id: params[:product_id])
+      @item.update quantity: params[:quantity]
+      redirect_to cart_index_path
+    end
 
-  def index
-  end
+    def destroy
+      @item = LineItem.find_by(product_id: params[:product_id])
+      @item.destroy
+      redirect_to cart_index_path
+    end
+
 end
+
+
