@@ -61,15 +61,11 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-/* @media (max-width: 768px) {
-  .logo {
-    /*       margin-left: 5px; */
-  }
-} */
+
 
 #navbar ul {
   display: inline-block;
-  float: right;
+  float:right;
   list-style: none;
   /* margin-right: 14px; */
   margin-top: -2px;
