@@ -10,16 +10,18 @@
      <li> <%= link_to "HOME", root_path %> </li>
      <li> <%= link_to "FLAVOURS", flavours_path %> </li>
      <li> <%= link_to "SHOP", flavours_path %> </li>
-    <li> <%= link_to "ABOUT US", flavours_path %> </li>     
+    <li> <%= link_to "ABOUT US", about_path %> </li>     
        <% if @current_user.present?%>
       Welcome, <%= @current_user.first_name %>
       |
-    <li>  <%= link_to 'Logout', login_path, method: 'delete', class:'login' %></li>
-      
+      <li> <%= link_to 'Edit Info', edit_user_path(@current_user) %></li>
+      |
+    <li>  <%= link_to 'Logout', root_path, method: 'delete' %></li>
+
      <%= link_to image_tag("cart.png", :class=>"cart-logo"), cart_index_path,  alt:"cart logo" %> 
     
     <% else %>  
-    <li>  <%= link_to 'Login', login_path %></li>
+      <li>  <%= link_to 'Login', login_path %></li>
       |
      <li> <%= link_to 'Sign up', new_user_path %></li>
     <% end %>
@@ -27,6 +29,8 @@
     </ul>
   </div>
 </nav>
+
+
 
 <%# 
 <div class="menuIcon">

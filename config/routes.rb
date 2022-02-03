@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   get '/cart/index' =>'cart#index'
   post '/cart/index' =>'cart#index'
   root 'home#home'
-
+  get '/about' => 'home#about'
   get '/flavours' => 'home#index'
   get '/flavours/:id' => 'home#show', as:'flavour'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  delete '/' => 'home#destroy'
 
 
   # post '/signup' => 'user#create'
