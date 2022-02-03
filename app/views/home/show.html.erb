@@ -1,5 +1,5 @@
-<h2>Show Ice Cream Flavour: <%= @product.name %></h2>
-
+<h2 class="description">Flavour: <%= @product.name %></h2>
+<div class="show-icecream">
 <p>
 <strong>Description:</strong>
 <%= @product.description %>
@@ -16,4 +16,5 @@ $<%= @product.price %>
 </p>
 
 <%= image_tag @product.image, class:"icecream-photo", alt:@product.name %>
-<%= link_to '<button type="button">Add to Cart</button>'.html_safe, cart_add_item_path(@product.id), method: "post" %>
+<%= link_to '<button type="button", class="cart-button">Add to Cart</button>'.html_safe, cart_add_item_path(@product.id), method: "post" %>
+</div>

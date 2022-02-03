@@ -1,19 +1,19 @@
-<h1>cart</h1>
+<h2>Shopping Cart</h2>
 <ul>
 <% @current_user.line_items.order(:created_at).each do |i| %>
-    <li>
-        product name:<%= i.product.name %>
-        quantity: <%= i.quantity %>
-        price: <%= i.total_price %>
+    <li class="cart-list">
+      <strong>  Name:</strong><%= i.product.name %> <br>
+      <strong>  Quantity: </strong><%= i.quantity %> <br>
+       <strong> Total Price: </strong><%= i.total_price %> <br>
     <br>
     <%= form_with url: cart_quantity_update_path(i.product.id), local: true do |f| %>
-    <strong>quantity:</strong>
-    <%= f.text_field :quantity, value: i.quantity, class: 'cart_quantity' %>
+    <strong>Change Quantity:</strong>
+    <%= f.text_field :quantity, value: i.quantity%>
     <br>
     <%= f.submit 'Update' %> 
     <%end%>
     <%= button_to 'Delete', line_item_deleted_path(i.product.id), method:'delete' %>
-     <%= link_to "Proceed to checkout", new_order_path %>
 </li>
 <% end %>
 </ul>
+<%= link_to '<button type="button", class="cart-button checkout-button">Check Out</button>'.html_safe, new_order_path, method: "get" %>
