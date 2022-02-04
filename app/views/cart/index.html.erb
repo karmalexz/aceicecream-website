@@ -1,19 +1,19 @@
 <h2>Shopping Cart</h2>
 <ul>
-<% @current_user.line_items.order(:created_at).each do |i| %>
-    <li class="cart-list">
-      <strong>  Name:</strong><%= i.product.name %> <br>
-      <strong>  Quantity: </strong><%= i.quantity %> <br>
-       <strong> Total Price: </strong><%= i.total_price %> <br>
-    <br>
-    <%= form_with url: cart_quantity_update_path(i.product.id), local: true do |f| %>
-    <strong>Change Quantity:</strong>
-    <%= f.text_field :quantity, value: i.quantity%>
-    <br>
-    <%= f.submit 'Update' %> 
-    <%end%>
-    <%= button_to 'Delete', line_item_deleted_path(i.product.id), method:'delete' %>
-</li>
-<% end %>
+  <% @current_user.line_items.order(:created_at).each do |i| %>
+      <li class="cart-list">
+        <strong>  Name:</strong><%= i.product.name %> <br>
+        <strong>  Quantity: </strong><%= i.quantity %> <br>
+        <strong> Total Price: </strong><%= i.total_price %> <br>
+        <br>
+        <%= form_with url: cart_quantity_update_path(i.product.id), local: true do |f| %>
+        <strong>Change Quantity:</strong>
+        <%= f.text_field :quantity, value: i.quantity%>
+        <br>
+        <%= f.submit 'Update' %> 
+        <%end%>
+        <%= button_to 'Delete', line_item_deleted_path(i.product.id), method:'delete' %>
+      </li>
+  <% end %>
 </ul>
 <%= link_to '<button type="button", class="cart-button checkout-button">Check Out</button>'.html_safe, root_path, method: "get" %>

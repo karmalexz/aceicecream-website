@@ -1,20 +1,20 @@
 <h2 class="description">Flavour: <%= @product.name %></h2>
 <div class="show-icecream">
-<p>
-<strong>Description:</strong>
-<%= @product.description %>
-</p>
+    <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+    </p>
 
-<p>
-<strong>Price:</strong>
-$<%= @product.price %>
-</p>
+    <p>
+        <strong>Price:</strong>
+        $<%= @product.price %>
+    </p>
 
-<p>
-<strong>Stock:</strong>
-<%= @product.stock %>
-</p>
+    <p>
+        <strong>Stock:</strong>
+        <%= @product.stock %>
+    </p>
 
-<%= image_tag @product.image, class:"icecream-photo", alt:@product.name %>
-<%= link_to '<button type="button", class="cart-button">Add to Cart</button>'.html_safe, cart_add_item_path(@product.id), method: "post" %>
+        <%= image_tag @product.image, class:"icecream-photo", alt:@product.name %>
+        <%= link_to '<button type="button", class="cart-button">Add to Cart</button>'.html_safe, cart_add_item_path(@product.id), method: "post" %>
 </div>

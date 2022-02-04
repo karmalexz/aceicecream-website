@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def home
-         fetch_user #sets @current_user
+    fetch_user #sets @current_user
   end
 
   def index
@@ -10,6 +10,7 @@ class HomeController < ApplicationController
   def show 
     @product = Product.find params[:id]
   end
+
   def destroy
     session[:user_id] = nil  # logs out the user
     redirect_to root_path 

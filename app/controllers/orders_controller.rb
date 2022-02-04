@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new order_params
     @current_user.line_items.order.each do |item|
-      @order.line_items << item
+    @order.line_items << item
       item.update(cart_id: nil)
     end
     @order.save
@@ -25,8 +25,8 @@ class OrdersController < ApplicationController
   end
 
   private
-  def order_params
-    params.require(:order).permit(:name, :email, :address, :pay_method, :user_id, :cart_id)
-  end
+    def order_params
+      params.require(:order).permit(:name, :email, :address, :pay_method, :user_id, :cart_id)
+    end
 
 end
